@@ -1,0 +1,39 @@
+<roundcube:include file="includes/layout.html" />
+
+<h1 class="voice"><roundcube:object name="productname" /> <roundcube:label name="login" /></h1>
+
+<div id="layout-content" class="selected no-navbar bdd-login-page" role="main">
+	<div class="bdd-login-shell">
+		<section class="bdd-login-left">
+			<div class="bdd-left-content">
+				<img src="/images/logo.svg" class="bdd-side-logo" alt="Logo">
+				<h2>Bantu Defend Dignity Mail</h2>
+				<p>Secure webmail access for official communication.</p>
+			</div>
+		</section>
+
+		<section class="bdd-login-right">
+			<div class="bdd-login-card">
+				<img src="/images/logo.svg" class="login-logo bdd-card-logo" alt="Logo">
+
+				<div class="bdd-card-heading">
+					<h2>Welcome back</h2>
+					<p>Sign in to continue to Bantu Defend Dignity Mail</p>
+				</div>
+
+				<roundcube:form id="login-form" name="login-form" method="post" class="propform bdd-login-form">
+					<roundcube:object name="loginform" form="login-form" size="40" submit=true class="form-control" />
+					<div id="login-footer" role="contentinfo">
+						<roundcube:container name="loginfooter" id="login-footer" />
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</div>
+
+<noscript>
+	<p class="noscriptwarning"><roundcube:label name="noscriptwarning" /></p>
+</noscript>
+
+<roundcube:include file="includes/footer.html" />
