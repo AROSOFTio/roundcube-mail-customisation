@@ -1,15 +1,15 @@
 {
   "stalwart_api_url": "http://stalwart:8080/jmap/",
   "stalwart_session_url": "http://stalwart:8080/jmap/session",
-  "stalwart_recovery_api_key": "CHANGE_ME",
+  "stalwart_recovery_api_key": "CHANGE_ME_STALWART_RECOVERY_API_KEY",
   "database_path": "/var/roundcube/db/password-recovery.sqlite",
   "smtp": {
     "host": "stalwart",
     "port": 465,
     "encryption": "ssl",
-    "username": "password-recovery@example.com",
-    "password": "CHANGE_ME",
-    "from_email": "password-recovery@example.com",
+    "username": "password-recovery@arofi.net",
+    "password": "CHANGE_ME_SMTP_APP_PASSWORD",
+    "from_email": "password-recovery@arofi.net",
     "from_name": "Webmail Support"
   },
   "hosts": {
