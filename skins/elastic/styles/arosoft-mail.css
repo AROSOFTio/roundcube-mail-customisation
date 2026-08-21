@@ -227,7 +227,7 @@ input.btn-primary:hover {
 	line-height: 1.45;
 }
 
-/* Roundcube generated login table */
+/* Generated login table */
 .bdd-login-form {
 	width: 100%;
 	margin: 34px 0 0;
@@ -855,4 +855,138 @@ html:not(.dark-mode) #layout-menu #taskmenu .special-buttons .logout:hover,
 html:not(.dark-mode) #layout-menu #taskmenu .special-buttons .logout:focus {
  background: #fee2e2 !important;
  color: #b91c1c !important;
+}
+
+/* AROSOFT generic mail branding */
+.action-about .frame-content:not(.arosoft-about-frame) > * {
+  display: none !important;
+}
+.action-about .frame-content:not(.arosoft-about-frame)::before {
+  content: "AROSOFT Mail" "\A" "Managed by AROSOFT Innovations Ltd" "\A\A" "Secure webmail, mailbox self-service, and domain email hosting for organizations." "\A" "For support, contact your email administrator or visit AROSOFT Innovations Ltd.";
+  white-space: pre-line;
+  display: block;
+  color: #1f2937;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  padding: 1rem 0;
+}
+.action-about .frame-content::first-line {
+  color: #0f3d91;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+html.dark-mode.action-about .frame-content::before,
+html.dark-mode .action-about .frame-content:not(.arosoft-about-frame)::before {
+  color: #f8fafc;
+}
+
+/* AROSOFT login refinements */
+.bdd-login-left {
+	position: relative;
+	border-radius: 0 34px 34px 0;
+	overflow: hidden;
+}
+
+.bdd-login-left::before {
+	content: "";
+	position: absolute;
+	top: -18%;
+	right: -104px;
+	width: 220px;
+	height: 56%;
+	border-radius: 0 0 0 220px;
+	background: var(--bdd-bg);
+	box-shadow: -20px 28px 48px rgba(15, 23, 42, 0.10);
+}
+
+.bdd-login-left::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 9px;
+	height: 160px;
+	border-radius: 0 0 0 18px;
+	background: linear-gradient(180deg, #FACC15 0%, #F97316 100%);
+	box-shadow: 0 16px 30px rgba(249, 115, 22, 0.28);
+}
+
+.bdd-left-content {
+	position: relative;
+	z-index: 1;
+}
+
+.bdd-login-card {
+	border-radius: 18px;
+}
+
+@media (max-width: 820px) {
+	.bdd-login-left {
+		border-radius: 0 0 26px 26px;
+	}
+
+	.bdd-login-left::before {
+		top: auto;
+		right: -72px;
+		bottom: -90px;
+		width: 180px;
+		height: 180px;
+		border-radius: 100px 0 0 0;
+	}
+
+	.bdd-login-left::after {
+		width: 130px;
+		height: 7px;
+		top: auto;
+		right: 22px;
+		bottom: 0;
+		border-radius: 14px 14px 0 0;
+	}
+}
+
+/* AROSOFT simple panel polish */
+.bdd-login-left {
+	position: relative;
+	border-radius: 0 28px 0 0;
+	overflow: hidden;
+}
+
+.bdd-login-left::before {
+	display: none;
+}
+
+.bdd-login-left::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 150px;
+	border-radius: 0 0 0 12px;
+	background: linear-gradient(180deg, #FACC15 0%, #F97316 100%);
+	box-shadow: none;
+}
+
+.bdd-left-content {
+	position: relative;
+	z-index: 1;
+}
+
+.bdd-login-card {
+	border-radius: 16px;
+}
+
+@media (max-width: 820px) {
+	.bdd-login-left {
+		border-radius: 0 0 22px 22px;
+	}
+
+	.bdd-login-left::after {
+		top: auto;
+		right: 24px;
+		bottom: 0;
+		width: 120px;
+		height: 7px;
+		border-radius: 12px 12px 0 0;
+	}
 }

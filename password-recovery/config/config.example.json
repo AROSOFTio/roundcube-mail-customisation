@@ -1,0 +1,34 @@
+{
+  "stalwart_api_url": "http://stalwart:8080/jmap/",
+  "stalwart_session_url": "http://stalwart:8080/jmap/session",
+  "stalwart_recovery_api_key": "CHANGE_ME",
+  "database_path": "/var/roundcube/db/password-recovery.sqlite",
+  "smtp": {
+    "host": "stalwart",
+    "port": 465,
+    "encryption": "ssl",
+    "username": "password-recovery@example.com",
+    "password": "CHANGE_ME",
+    "from_email": "password-recovery@example.com",
+    "from_name": "Webmail Support"
+  },
+  "hosts": {
+    "mail.arofi.net": {
+      "domain": "arofi.net",
+      "name": "AROSOFT Webmail"
+    },
+    "mail.bantudefdig.com": {
+      "domain": "bantudefdig.com",
+      "name": "Bantu Defend Dignity Mail"
+    },
+    "mail.owltechsolutionsltd.com": {
+      "domain": "owltechsolutionsltd.com",
+      "name": "Owl Tech Solutions Mail"
+    }
+  },
+  "hosted_domains": [
+    "arofi.net",
+    "bantudefdig.com",
+    "owltechsolutionsltd.com"
+  ]
+}

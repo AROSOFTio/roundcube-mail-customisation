@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background-color: #fff;
+}
+.watermark-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.14; /* Faint watermark style */
+  pointer-events: none;
+}
+.watermark-logo {
+  max-width: 300px;
+  max-height: 150px;
+  object-fit: contain;
+}
+html.dark-mode body {
+  background-color: #21292c;
+}
+html.dark-mode .watermark-container {
+  opacity: 0.06;
+}
+</style>
+<script>
+  try {
+    if (document.cookie.indexOf('colorMode=dark') > -1
+      || (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.className += ' dark-mode';
+    }
+  } catch (e) { }
+</script>
+</head>
+<body>
+  <div class="watermark-container">
+    <roundcube:object name="logo" class="watermark-logo" />
+  </div>
+</body>
+</html>

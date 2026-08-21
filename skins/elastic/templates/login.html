@@ -1,30 +1,34 @@
 <roundcube:include file="includes/layout.html" />
 
-<h1 class="voice"><roundcube:object name="productname" /> <roundcube:label name="login" /></h1>
+<h1 class="voice">AROSOFT Webmail <roundcube:label name="login" /></h1>
 
 <div id="layout-content" class="selected no-navbar bdd-login-page" role="main">
 	<div class="bdd-login-shell">
 		<section class="bdd-login-left">
 			<div class="bdd-left-content">
-				<img src="/images/logo.svg" class="bdd-side-logo" alt="Logo">
-				<h2>Bantu Defend Dignity Mail</h2>
-				<p>Secure webmail access for official communication.</p>
+				<roundcube:object name="logo" class="bdd-side-logo" />
+				<h2>AROSOFT Webmail</h2>
+				<p>Secure webmail access for your organization.</p>
 			</div>
 		</section>
 
 		<section class="bdd-login-right">
 			<div class="bdd-login-card">
-				<img src="/images/logo.svg" class="login-logo bdd-card-logo" alt="Logo">
+				<roundcube:object name="logo" class="login-logo bdd-card-logo" />
 
 				<div class="bdd-card-heading">
 					<h2>Welcome back</h2>
-					<p>Sign in to continue to Bantu Defend Dignity Mail</p>
+					<p>Sign in to continue to AROSOFT Webmail</p>
 				</div>
 
 				<roundcube:form id="login-form" name="login-form" method="post" class="propform bdd-login-form">
 					<roundcube:object name="loginform" form="login-form" size="40" submit=true class="form-control" />
 					<div id="login-footer" role="contentinfo">
 						<roundcube:container name="loginfooter" id="login-footer" />
+					</div>
+					<div class="bdd-password-tools">
+						<a href="/password-recovery/?action=forgot" class="bdd-password-link">Forgot password?</a> <span aria-hidden="true">·</span> <a href="/password-recovery/?action=enroll" class="bdd-password-link">Set up recovery</a>
+						<p>Already signed in? Change your mailbox password under Settings → Password. Forgot it? Use secure recovery here.</p>
 					</div>
 				</form>
 			</div>

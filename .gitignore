@@ -2,3 +2,5 @@ config/config.inc.php
 logs/
 temp/
 *.log
+*.bak-*
+password-recovery/config/config.json
