@@ -39,15 +39,30 @@ The production Roundcube container uses bind mounts from `/data/roundcube-custom
 
 ## Deployment Notes
 
-This repo can be used as the source of truth for deployment, but the live secret config should still be injected separately as a server file or secret, not stored in GitHub.
+This repo is the source of truth for Roundcube custom files. Branding, CSS, templates, images, scripts, and password-recovery code should be edited here first, then deployed to the server.
+
+Do not edit the Coolify compose file for normal design/code changes. The compose file should only keep mounting `/data/roundcube-custom` into the Roundcube container.
 
 Recommended approach:
 
-1. Deploy this repo to `/data/roundcube-custom`.
-2. Keep `password-recovery/config/config.json` on the server, copied from `config.example.json` and filled with real secrets.
-3. Mount the repo files into the Roundcube container as read-only where possible.
-4. Restart/recreate only the Roundcube container after template, CSS, JS, or image changes.
-5. Do not prune Docker volumes during deployment; Roundcube and Stalwart data live in named volumes.
+1. Edit files in this repo.
+2. Commit and push to `main`.
+3. SSH to the server and run:
+
+```sh
+cd /data/roundcube-custom
+sh deploy.sh
+```
+
+The deploy script:
+
+- backs up the current `/data/roundcube-custom` folder;
+- pulls `origin/main`;
+- preserves `password-recovery/config/config.json`;
+- validates the Coolify compose file;
+- restarts only the Roundcube container.
+
+Do not prune Docker volumes during deployment; Roundcube and Stalwart data live in named volumes.
 
 ## Production Domains
 
